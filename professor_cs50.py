@@ -19,7 +19,7 @@ def get_level():
 
 
 def generate_integer(level):
-    score = 10
+    print(level)
     if level == 1:
         i1 = 0
         i2 = 9
@@ -44,8 +44,6 @@ def generate_integer(level):
                 print("EEE")
         if ok == 0:
             print(x+y)
-            score -= 1
-    print(score)
 
 
 if __name__ == "__main__":
