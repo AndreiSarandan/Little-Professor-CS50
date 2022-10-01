@@ -21,7 +21,7 @@ def get_level():
 def generate_integer(level):
     print(level)
     if level == 1:
-        i1 = 1
+        i1 = 0
         i2 = 9
     elif level == 2:
         i1 = 10
