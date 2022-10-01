@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import requests
 
 try:
@@ -63,3 +64,15 @@ def generate_integer(level):
 if __name__ == "__main__":
     main()
 >>>>>>> parent of 3c5aa4d (Rename bitcoin_price_index_cs50.py to Little Professor CS50)
+=======
+import requests
+
+try:
+    # extract bitcoin price value
+    r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+    json = r.json()
+    z = (json['bpi']['USD']['rate'])
+    print(z)
+except requests.RequestException:
+    print("error")
+>>>>>>> parent of 0ba68ec (Update bitcoin_price_index_cs50.py)
