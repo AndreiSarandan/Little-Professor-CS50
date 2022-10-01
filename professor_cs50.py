@@ -2,19 +2,24 @@ import random
 
 
 def main():
-    level = get_level()
-    generate_integer(level)
+    lvl = get_level()
+    generate_integer(lvl)
 
 
 def get_level():
-    level = int(input("Select level: "))
-    if level == 1 or level == 2 or level == 3:
-        return(level)
-    else:
+    while True:
+        try:
+            level = int(input("Select level: "))
+            break
+        except ValueError:
+            pass
+    if level != 1 and level != 2 and level != 3:
         get_level()
+    return level
 
 
 def generate_integer(level):
+    print(level)
     if level == 1:
         i1 = 1
         i2 = 9
@@ -23,7 +28,7 @@ def generate_integer(level):
         i2 = 99
     elif level == 3:
         i1 = 100
-        i3 = 999
+        i2 = 999
 
     for i in range(10):
         ok = 0
